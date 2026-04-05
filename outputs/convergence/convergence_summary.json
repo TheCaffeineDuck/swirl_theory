@@ -1,0 +1,38 @@
+{
+  "study": "convergence_check",
+  "date": "2026-03-19",
+  "corrected": "2026-04-05",
+  "correction_note": "Fixed pol_T1 N=64 baseline: was using CE=8 anti-tetrahedral (-23.94) instead of CE=12 polarized T1 (-51.53)",
+  "configs_tested": [
+    {
+      "geometry": "cube",
+      "config": "polarized_T1",
+      "cross_edges": 12,
+      "E_bind_N64": -51.5264,
+      "E_bind_N128": -51.5293,
+      "relative_difference": 0.0000563,
+      "sign_agrees": true,
+      "pass_10pct": true
+    },
+    {
+      "geometry": "tetrahedron",
+      "config": "single_flip",
+      "E_bind_N64": -0.04089707182469482,
+      "E_bind_N128": -0.04082803508971722,
+      "relative_difference": 0.001689486562554172,
+      "sign_agrees": true,
+      "note": "Near-zero E_bind; sign agreement is the meaningful test",
+      "pass": true
+    }
+  ],
+  "baseline_comparison": {
+    "E_single_0_N64": 13.461782355144003,
+    "E_single_0_N128": 13.461782355144004,
+    "E_single_500_N64": 13.46381472407115,
+    "E_single_500_N128": 13.461832658146761,
+    "relative_difference_E0": 1.3195554589556047e-16,
+    "relative_difference_E500": 0.00014722512675393768
+  },
+  "overall_verdict": "PASS",
+  "wall_clock_minutes": 28.6733633930499
+}

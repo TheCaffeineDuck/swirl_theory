@@ -1,0 +1,14 @@
+{
+  "n_seeds": 50,
+  "total_wall_time": 51863.543194868835,
+  "self_organization_detected": true,
+  "mean_S_initial": 0.04179972159359731,
+  "mean_S_final": -0.07510317376039187,
+  "std_S_final": 0.13682689088316285,
+  "mean_delta_S": -0.11690289535398916,
+  "std_delta_S": 0.053634185917437495,
+  "z_score": -15.412339840935633,
+  "n_seeds_S_decreased": 50,
+  "n_seeds_bound_at_final": 30,
+  "mean_E_bind_final": -3.1197374702446523
+}

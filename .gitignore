@@ -1,7 +1,106 @@
+# =============================================================
+# Geometric Selection Rules for Multi-Oscillon Cluster Stability
+# Tracks ONLY files supporting paper_draft_v8.md
+# =============================================================
+
+# --- System / environment ---
 .venv/
 __pycache__/
 *.pyc
-outputs/
+.DS_Store
+.claude/
+*.tmp
 *.npz
 *.zip
 .env
+logs/
+
+# --- Exclude ALL outputs, then whitelist paper-critical dirs ---
+outputs/*
+
+# Paper-critical data (whitelist)
+# NOTE: git requires parent dirs to be unignored before children
+!outputs/phase1/
+!outputs/phase1/**
+!outputs/phase2/
+!outputs/phase2/**
+!outputs/phase3/
+!outputs/phase3/**
+!outputs/phase4_new_geometries/
+!outputs/phase4_new_geometries/**
+!outputs/continuous_phase/
+!outputs/continuous_phase/**
+!outputs/second_potential/
+!outputs/second_potential/**
+!outputs/convergence/
+!outputs/convergence/**
+!outputs/edge_length_d75/
+!outputs/edge_length_d75/**
+!outputs/extended_evolution/
+!outputs/extended_evolution/**
+!outputs/phase12/
+!outputs/phase12/**
+!outputs/pairwise_calibration/
+!outputs/pairwise_calibration/**
+!outputs/figures/
+!outputs/figures/**
+!outputs/oct_audit/
+!outputs/oct_audit/**
+
+# --- Obsolete files at repo root ---
+README_2026-03-15.md
+paper_draft_v5.md
+paper_draft_v6.md
+paper_draft_v7.md
+session_results_*.md
+
+# --- Documentation originals (copies live in docs/) ---
+CONSOLIDATED_LITERATURE_REVIEW_2026-03-22.md
+RESEARCH_PLAN_HIERARCHICAL_2026-03-21.md
+STUDY_PLAN_2026-03-19.md
+
+# --- Superseded study scripts ---
+studies/01_run_setA.py
+studies/01_run_setB.py
+studies/02_corrected_binding.py
+studies/07_pairwise_calibration_setC.py
+
+# --- Exploratory studies NOT referenced in the paper ---
+studies/03b_cross_edge_universality.py
+studies/04b_formation_sweep.py
+studies/05_formation_test.py
+studies/06_formation_cloud.py
+studies/07_ico_ce15_threshold.py
+studies/08b_selection_rule_convergence.py
+studies/exp_a_perturbation.py
+studies/exp_b_scattering.py
+studies/exp_c_soup.py
+studies/analyze_exp_a.py
+studies/analyze_exp_b.py
+studies/analyze_exp_c.py
+studies/folding_exploration.py
+studies/frustration_deep.py
+studies/gap_challenge.py
+studies/semiclassical.py
+studies/phase_rigidity.py
+studies/correlation_structure.py
+studies/conservation_audit.py
+studies/iron_peak_survey.py
+studies/iron_peak_tiebreak.py
+studies/oct_radiation_optimal.py
+studies/oct_time_resolved.py
+studies/oct_audit.py
+studies/bridge_studies.py
+studies/multibody_study.py
+studies/subdivided_cube_pde.py
+studies/qball_2body.py
+studies/qball_cube_cluster.py
+studies/qball_stability_sweep.py
+studies/static_energy_decomposition.py
+studies/phase13_*.py
+
+# --- Exploratory directories ---
+quantum_reduction/
+geometric_binding_study/studies/
+geometric_binding_study/outputs/
+geometric_binding_study/*.py

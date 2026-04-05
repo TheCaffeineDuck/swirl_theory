@@ -1,0 +1,46 @@
+[
+  {
+    "geometry": "octahedron",
+    "config_name": "all_same",
+    "cross_edges": 0,
+    "cross_edge_fraction": 0.0,
+    "n_pi": 0,
+    "final_E_bind": 154.50920989957754,
+    "amplitude_retention": 0.2730324095291319,
+    "energy_drift": 6.273353441065963e-05,
+    "verdict": "UNSTABLE"
+  },
+  {
+    "geometry": "octahedron",
+    "config_name": "single_flip",
+    "cross_edges": 4,
+    "cross_edge_fraction": 0.3333333333333333,
+    "n_pi": 1,
+    "final_E_bind": 51.64506834413362,
+    "amplitude_retention": 0.418306108899568,
+    "energy_drift": 9.76756155008972e-05,
+    "verdict": "UNSTABLE"
+  },
+  {
+    "geometry": "octahedron",
+    "config_name": "balanced",
+    "cross_edges": 6,
+    "cross_edge_fraction": 0.5,
+    "n_pi": 2,
+    "final_E_bind": -5.4484634598309185,
+    "amplitude_retention": 0.37975238707006964,
+    "energy_drift": 0.00016566263219756037,
+    "verdict": "STABLE"
+  },
+  {
+    "geometry": "octahedron",
+    "config_name": "polarized",
+    "cross_edges": 8,
+    "cross_edge_fraction": 0.6666666666666666,
+    "n_pi": 2,
+    "final_E_bind": -32.01208646342103,
+    "amplitude_retention": 0.34816483277970883,
+    "energy_drift": 0.00019775937481397078,
+    "verdict": "STABLE"
+  }
+]

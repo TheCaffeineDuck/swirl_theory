@@ -1,0 +1,100 @@
+02a_cube_phase2.py  --  4 configurations
+Output dir: /Users/aaronramos/Desktop/swirl-theory/outputs/phase2/cube
+
+============================================================
+  Config: all_same_phase
+  Cross-edges: 0 / 12  (0.000)
+  Pi-phases:   0 / 8
+============================================================
+  E(0) = 1.815429e+02  max|phi|(0) = 0.609031
+  step= 1000  t=   50.0  E=1.81553e+02  E_bind=7.3843e+01  max|phi|=0.12526  drift=5.62e-05
+  step= 2000  t=  100.0  E=1.81552e+02  E_bind=7.3842e+01  max|phi|=0.10246  drift=5.16e-05
+  step= 3000  t=  150.0  E=1.81551e+02  E_bind=7.3842e+01  max|phi|=0.10798  drift=4.64e-05
+  step= 4000  t=  200.0  E=1.81553e+02  E_bind=7.3843e+01  max|phi|=0.17807  drift=5.82e-05
+  step= 5000  t=  250.0  E=1.81553e+02  E_bind=7.3843e+01  max|phi|=0.14537  drift=5.45e-05
+  step= 6000  t=  300.0  E=1.81552e+02  E_bind=7.3843e+01  max|phi|=0.10496  drift=5.22e-05
+  step= 7000  t=  350.0  E=1.81552e+02  E_bind=7.3841e+01  max|phi|=0.14350  drift=4.81e-05
+  step= 8000  t=  400.0  E=1.81553e+02  E_bind=7.3843e+01  max|phi|=0.46373  drift=5.62e-05
+  step= 9000  t=  450.0  E=1.81551e+02  E_bind=7.3842e+01  max|phi|=0.40032  drift=4.34e-05
+  step=10000  t=  500.0  E=1.81552e+02  E_bind=7.3842e+01  max|phi|=0.24855  drift=5.17e-05
+
+  -- all_same_phase complete (455.2 s) --
+  E_bind(T) = 7.3842e+01  |  verdict: UNSTABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/cube/all_same_phase.json
+
+============================================================
+  Config: single_flip
+  Cross-edges: 3 / 12  (0.250)
+  Pi-phases:   1 / 8
+============================================================
+  E(0) = 1.445843e+02  max|phi|(0) = 0.607975
+  step= 1000  t=   50.0  E=1.44597e+02  E_bind=3.6888e+01  max|phi|=0.11665  drift=8.91e-05
+  step= 2000  t=  100.0  E=1.44597e+02  E_bind=3.6887e+01  max|phi|=0.09421  drift=8.74e-05
+  step= 3000  t=  150.0  E=1.44596e+02  E_bind=3.6887e+01  max|phi|=0.11015  drift=8.27e-05
+  step= 4000  t=  200.0  E=1.44598e+02  E_bind=3.6887e+01  max|phi|=0.17595  drift=9.42e-05
+  step= 5000  t=  250.0  E=1.44597e+02  E_bind=3.6887e+01  max|phi|=0.15965  drift=8.89e-05
+  step= 6000  t=  300.0  E=1.44597e+02  E_bind=3.6887e+01  max|phi|=0.09806  drift=8.68e-05
+  step= 7000  t=  350.0  E=1.44597e+02  E_bind=3.6887e+01  max|phi|=0.17640  drift=8.51e-05
+  step= 8000  t=  400.0  E=1.44597e+02  E_bind=3.6887e+01  max|phi|=0.39442  drift=9.09e-05
+  step= 9000  t=  450.0  E=1.44595e+02  E_bind=3.6886e+01  max|phi|=0.38306  drift=7.61e-05
+  step=10000  t=  500.0  E=1.44597e+02  E_bind=3.6887e+01  max|phi|=0.21101  drift=8.82e-05
+
+  -- single_flip complete (420.1 s) --
+  E_bind(T) = 3.6887e+01  |  verdict: UNSTABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/cube/single_flip.json
+
+============================================================
+  Config: checkerboard
+  Cross-edges: 6 / 12  (0.500)
+  Pi-phases:   4 / 8
+============================================================
+  E(0) = 1.038306e+02  max|phi|(0) = 0.535739
+  step= 1000  t=   50.0  E=1.03846e+02  E_bind=-3.8632e+00  max|phi|=0.07693  drift=1.53e-04
+  step= 2000  t=  100.0  E=1.03847e+02  E_bind=-3.8633e+00  max|phi|=0.07665  drift=1.55e-04
+  step= 3000  t=  150.0  E=1.03847e+02  E_bind=-3.8629e+00  max|phi|=0.09140  drift=1.55e-04
+  step= 4000  t=  200.0  E=1.03848e+02  E_bind=-3.8629e+00  max|phi|=0.10062  drift=1.66e-04
+  step= 5000  t=  250.0  E=1.03847e+02  E_bind=-3.8632e+00  max|phi|=0.08241  drift=1.55e-04
+  step= 6000  t=  300.0  E=1.03847e+02  E_bind=-3.8630e+00  max|phi|=0.09477  drift=1.56e-04
+  step= 7000  t=  350.0  E=1.03847e+02  E_bind=-3.8628e+00  max|phi|=0.07726  drift=1.61e-04
+  step= 8000  t=  400.0  E=1.03847e+02  E_bind=-3.8633e+00  max|phi|=0.17224  drift=1.57e-04
+  step= 9000  t=  450.0  E=1.03845e+02  E_bind=-3.8635e+00  max|phi|=0.32594  drift=1.42e-04
+  step=10000  t=  500.0  E=1.03847e+02  E_bind=-3.8634e+00  max|phi|=0.14472  drift=1.59e-04
+
+  -- checkerboard complete (436.4 s) --
+  E_bind(T) = -3.8634e+00  |  verdict: STABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/cube/checkerboard.json
+
+============================================================
+  Config: polarized_T1
+  Cross-edges: 8 / 12  (0.667)
+  Pi-phases:   4 / 8
+============================================================
+  E(0) = 8.374743e+01  max|phi|(0) = 0.480931
+  step= 1000  t=   50.0  E=8.37657e+01  E_bind=-2.3944e+01  max|phi|=0.09613  drift=2.18e-04
+  step= 2000  t=  100.0  E=8.37657e+01  E_bind=-2.3944e+01  max|phi|=0.10489  drift=2.18e-04
+  step= 3000  t=  150.0  E=8.37661e+01  E_bind=-2.3943e+01  max|phi|=0.09998  drift=2.23e-04
+  step= 4000  t=  200.0  E=8.37664e+01  E_bind=-2.3944e+01  max|phi|=0.10626  drift=2.27e-04
+  step= 5000  t=  250.0  E=8.37650e+01  E_bind=-2.3945e+01  max|phi|=0.10103  drift=2.10e-04
+  step= 6000  t=  300.0  E=8.37646e+01  E_bind=-2.3945e+01  max|phi|=0.07864  drift=2.05e-04
+  step= 7000  t=  350.0  E=8.37657e+01  E_bind=-2.3944e+01  max|phi|=0.08415  drift=2.18e-04
+  step= 8000  t=  400.0  E=8.37653e+01  E_bind=-2.3945e+01  max|phi|=0.09906  drift=2.14e-04
+  step= 9000  t=  450.0  E=8.37640e+01  E_bind=-2.3945e+01  max|phi|=0.27540  drift=1.98e-04
+  step=10000  t=  500.0  E=8.37655e+01  E_bind=-2.3945e+01  max|phi|=0.16454  drift=2.16e-04
+
+  -- polarized_T1 complete (445.9 s) --
+  E_bind(T) = -2.3945e+01  |  verdict: STABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/cube/polarized_T1.json
+
+Summary saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/cube/summary.json
+
+==========================================================================================
+  CUBE SUMMARY TABLE
+==========================================================================================
+  Config                X-edges     X-frac      E_bind(T)      Amp Ret      Drift    Verdict
+  --------------------------------------------------------------------------------------
+  all_same_phase              0      0.000     7.3842e+01       0.4971  5.173e-05   UNSTABLE
+  single_flip                 3      0.250     3.6887e+01       0.4220  8.821e-05   UNSTABLE
+  checkerboard                6      0.500    -3.8634e+00       0.2894  1.590e-04     STABLE
+  polarized_T1                8      0.667    -2.3945e+01       0.3291  2.163e-04     STABLE
+==========================================================================================
+  Phase 2 Cube complete.

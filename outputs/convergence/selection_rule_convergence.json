@@ -1,0 +1,67 @@
+{
+  "study": "selection_rule_convergence",
+  "date": "2026-03-19",
+  "question": "Does the sign pattern of E_bind survive at N=128?",
+  "results": [
+    {
+      "geometry": "cube",
+      "config": "cube_allsame",
+      "f_cross": 0.0,
+      "E_bind_N64": 73.8417,
+      "E_bind_N128": 73.84819301919327,
+      "sign_N64": "positive",
+      "sign_N128": "positive",
+      "sign_preserved": true
+    },
+    {
+      "geometry": "cube",
+      "config": "cube_checkerboard",
+      "f_cross": 0.5,
+      "E_bind_N64": -3.8634,
+      "E_bind_N128": -3.863649510003711,
+      "sign_N64": "negative",
+      "sign_N128": "negative",
+      "sign_preserved": true
+    },
+    {
+      "geometry": "icosahedron",
+      "config": "ico_ce15A",
+      "f_cross": 0.5,
+      "E_bind_N64": 3.557,
+      "E_bind_N128": 3.557598268460879,
+      "sign_N64": "positive",
+      "sign_N128": "positive",
+      "sign_preserved": true
+    },
+    {
+      "geometry": "icosahedron",
+      "config": "ico_ce20",
+      "f_cross": 0.667,
+      "E_bind_N64": -50.1083,
+      "E_bind_N128": -50.111624451185264,
+      "sign_N64": "negative",
+      "sign_N128": "negative",
+      "sign_preserved": true
+    }
+  ],
+  "combined_with_phase4": {
+    "cube_polarized_T1": {
+      "E_N64": -23.95,
+      "E_N128": -51.53,
+      "sign_preserved": true
+    },
+    "tet_single_flip": {
+      "E_N64": -0.041,
+      "E_N128": -0.041,
+      "sign_preserved": true
+    }
+  },
+  "verdict": {
+    "total_configs_tested": 6,
+    "signs_preserved": "6/6",
+    "selection_rule_robust": "YES",
+    "magnitude_convergence": "NO -- magnitudes change significantly for dense clusters",
+    "conclusion": "Selection rule is ROBUST: all 6 configs preserve sign at N=128. Qualitative stability classification is resolution-independent."
+  },
+  "wall_clock_minutes": 72.98264015416643
+}

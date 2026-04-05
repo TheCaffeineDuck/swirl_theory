@@ -1,0 +1,101 @@
+{
+  "description": "Phase 10: Continuous Phase Pilot -- E_pair(Dphi)",
+  "parameters": {
+    "N": 64,
+    "L": 50.0,
+    "m": 1.0,
+    "g4": 0.3,
+    "g6": 0.055,
+    "phi0": 0.5,
+    "R": 2.5,
+    "dt": 0.05,
+    "sigma": 0.01,
+    "T_final": 500.0,
+    "d": 6.0,
+    "omega_eff": 1.1125610675103892
+  },
+  "E_single_T500": 13.46381472407115,
+  "validation": {
+    "E_single_T0": {
+      "0": 13.461782355144003,
+      "pi/2": 13.461782355143999,
+      "pi": 13.461782355144003
+    },
+    "max_deviation_pct": 1.3195554589556047e-14,
+    "energy_independent": true,
+    "baseline_match": true,
+    "omega_eff": 1.1125610675103892
+  },
+  "data_points": [
+    {
+      "dphi_deg": 0,
+      "dphi_rad": 0,
+      "E_bind": 5.172304543261493,
+      "E_total_final": 32.099933991403795
+    },
+    {
+      "dphi_deg": 30,
+      "dphi_rad": 0.5235987755982988,
+      "E_bind": 4.486583518147231,
+      "E_total_final": 31.414212966289533
+    },
+    {
+      "dphi_deg": 60,
+      "dphi_rad": 1.0471975511965976,
+      "E_bind": 2.594275401808222,
+      "E_total_final": 29.521904849950523
+    },
+    {
+      "dphi_deg": 90,
+      "dphi_rad": 1.5707963267948966,
+      "E_bind": -0.00396223055906475,
+      "E_total_final": 26.923667217583237
+    },
+    {
+      "dphi_deg": 120,
+      "dphi_rad": 2.0943951023931953,
+      "E_bind": -2.5953091196705564,
+      "E_total_final": 24.332320328471745
+    },
+    {
+      "dphi_deg": 150,
+      "dphi_rad": 2.6179938779914944,
+      "E_bind": -4.491801534441532,
+      "E_total_final": 22.43582791370077
+    },
+    {
+      "dphi_deg": 180,
+      "dphi_rad": 3.141592653589793,
+      "E_bind": -5.188490329426578,
+      "E_total_final": 21.739139118715723
+    }
+  ],
+  "cosine_fit": {
+    "A": 5.182774168481953,
+    "B": -0.0037713929829694967,
+    "R_squared": 0.9999990974566368,
+    "residuals": {
+      "0": -0.006698232237490664,
+      "30": 0.0019408191470589031,
+      "60": 0.006659710550214637,
+      "90": -0.00019083757609557068,
+      "120": -0.0001506424466111156,
+      "150": 0.0003839505245792907,
+      "180": -0.001944767961655991
+    }
+  },
+  "generalized_threshold": {
+    "neg_B_over_A": 0.0007276784325090797,
+    "dphi_star_rad": 1.5700686482981678,
+    "dphi_star_deg": 89.95830709329502,
+    "binary_f_star": 0.49921889264462943
+  },
+  "endpoint_consistency": {
+    "E_bind_dphi0": 5.172304543261493,
+    "E_bind_dphi0_ref": 5.172304543261493,
+    "E_bind_dphi180": -5.188490329426578,
+    "E_bind_dphi180_ref": -5.188490329426578
+  },
+  "generalization_statement": "For a multi-oscillon cluster with continuous phases {phi_i}, the pairwise binding energy is: E_bind = sum_edges [A cos(phi_i - phi_j) + B]. The cluster is bound when sum_edges cos(Dphi_e) < -B*N_edges/A. For binary phases (Dphi in {0, pi}), this reduces to the 50%% cross-edge fraction rule.",
+  "completed": true
+}

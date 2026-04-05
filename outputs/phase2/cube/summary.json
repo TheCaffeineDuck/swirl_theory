@@ -1,0 +1,47 @@
+[
+  {
+    "config_name": "all_same_phase",
+    "cross_edges": 0,
+    "cross_edge_fraction": 0.0,
+    "final_E_bind": 73.84173111252294,
+    "amplitude_retention": 0.49709800473360255,
+    "energy_drift": 5.173062673509853e-05,
+    "verdict": "UNSTABLE"
+  },
+  {
+    "config_name": "single_flip",
+    "cross_edges": 3,
+    "cross_edge_fraction": 0.25,
+    "final_E_bind": 36.88656755737888,
+    "amplitude_retention": 0.42202377113619366,
+    "energy_drift": 8.82097352153954e-05,
+    "verdict": "UNSTABLE"
+  },
+  {
+    "config_name": "adjacent_flip",
+    "cross_edges": 4,
+    "cross_edge_fraction": 0.3333333333333333,
+    "final_E_bind": 20.586591211474442,
+    "amplitude_retention": 0.3693496754960174,
+    "energy_drift": 0.00011143369015662386,
+    "verdict": "UNSTABLE"
+  },
+  {
+    "config_name": "checkerboard",
+    "cross_edges": 6,
+    "cross_edge_fraction": 0.5,
+    "final_E_bind": -3.8634193342947754,
+    "amplitude_retention": 0.289439061620125,
+    "energy_drift": 0.00015896361684661044,
+    "verdict": "STABLE"
+  },
+  {
+    "config_name": "polarized_T1",
+    "cross_edges": 12,
+    "cross_edge_fraction": 1.0,
+    "final_E_bind": -23.9449738779296,
+    "amplitude_retention": 0.3290787424335274,
+    "energy_drift": 0.00021626555941710944,
+    "verdict": "STABLE"
+  }
+]

@@ -1,0 +1,308 @@
+Icosahedron: 12 vertices, 30 edges, min_edge=6.0000 (target 6.0)
+Vertex positions:
+  v00 = (0.0000, 3.0000, 4.8541)
+  v01 = (3.0000, 4.8541, 0.0000)
+  v02 = (4.8541, 0.0000, 3.0000)
+  v03 = (0.0000, 3.0000, -4.8541)
+  v04 = (3.0000, -4.8541, 0.0000)
+  v05 = (4.8541, 0.0000, -3.0000)
+  v06 = (0.0000, -3.0000, 4.8541)
+  v07 = (-3.0000, 4.8541, 0.0000)
+  v08 = (-4.8541, 0.0000, 3.0000)
+  v09 = (0.0000, -3.0000, -4.8541)
+  v10 = (-3.0000, -4.8541, 0.0000)
+  v11 = (-4.8541, 0.0000, -3.0000)
+
+Searching 4096 configs for targets [0, 8, 13, 14, 15, 16, 18, 20] ...
+Found configs for cross-edge counts: [0, 8, 13, 14, 15, 16, 18, 20]
+
+02b_icosahedron_phase2.py  --  8 configurations
+Output dir: /Users/aaronramos/Desktop/swirl-theory/outputs/phase2/icosahedron
+
+============================================================
+  Config: ce_0
+  Cross-edges: 0 / 30  (0.000)
+  Pi-phases:   0 / 12
+============================================================
+  E(0) = 3.256604e+02  max|phi|(0) = 0.680887
+  step= 1000  t=   50.0  E=3.25675e+02  E_bind=1.6411e+02  max|phi|=0.17865  drift=4.39e-05
+  step= 2000  t=  100.0  E=3.25673e+02  E_bind=1.6411e+02  max|phi|=0.13692  drift=3.92e-05
+  step= 3000  t=  150.0  E=3.25674e+02  E_bind=1.6411e+02  max|phi|=0.13637  drift=4.31e-05
+  step= 4000  t=  200.0  E=3.25674e+02  E_bind=1.6411e+02  max|phi|=0.23714  drift=4.15e-05
+  step= 5000  t=  250.0  E=3.25673e+02  E_bind=1.6411e+02  max|phi|=0.25840  drift=3.97e-05
+  step= 6000  t=  300.0  E=3.25672e+02  E_bind=1.6411e+02  max|phi|=0.11791  drift=3.64e-05
+  step= 7000  t=  350.0  E=3.25673e+02  E_bind=1.6411e+02  max|phi|=0.26251  drift=3.89e-05
+  step= 8000  t=  400.0  E=3.25672e+02  E_bind=1.6411e+02  max|phi|=0.74064  drift=3.50e-05
+  step= 9000  t=  450.0  E=3.25672e+02  E_bind=1.6411e+02  max|phi|=0.21078  drift=3.52e-05
+  step=10000  t=  500.0  E=3.25672e+02  E_bind=1.6411e+02  max|phi|=0.37155  drift=3.43e-05
+
+  -- ce_0 complete (454.9 s) --
+  E_bind(T) = 1.6411e+02  |  verdict: UNSTABLE
+Traceback (most recent call last):
+  File "/Users/aaronramos/Desktop/swirl-theory/studies/02b_icosahedron_phase2.py", line 222, in <module>
+    summaries.append(run_config(ce_count, phases))
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/aaronramos/Desktop/swirl-theory/studies/02b_icosahedron_phase2.py", line 199, in run_config
+    json.dump(per_config, f, separators=(",", ":"))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 181, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py", line 444, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py", line 413, in _iterencode_dict
+    yield from chunks
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py", line 451, in _iterencode
+    newobj = _default(o)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type int64 is not JSON serializable
+when serializing list item 0
+when serializing dict item 'phases'
+Icosahedron: 12 vertices, 30 edges, min_edge=6.0000 (target 6.0)
+Vertex positions:
+  v00 = (0.0000, 3.0000, 4.8541)
+  v01 = (3.0000, 4.8541, 0.0000)
+  v02 = (4.8541, 0.0000, 3.0000)
+  v03 = (0.0000, 3.0000, -4.8541)
+  v04 = (3.0000, -4.8541, 0.0000)
+  v05 = (4.8541, 0.0000, -3.0000)
+  v06 = (0.0000, -3.0000, 4.8541)
+  v07 = (-3.0000, 4.8541, 0.0000)
+  v08 = (-4.8541, 0.0000, 3.0000)
+  v09 = (0.0000, -3.0000, -4.8541)
+  v10 = (-3.0000, -4.8541, 0.0000)
+  v11 = (-4.8541, 0.0000, -3.0000)
+
+Searching 4096 configs for targets [0, 8, 13, 14, 15, 16, 18, 20] ...
+Found configs for cross-edge counts: [0, 8, 13, 14, 15, 16, 18, 20]
+
+02b_icosahedron_phase2.py  --  8 configurations
+Output dir: /Users/aaronramos/Desktop/swirl-theory/outputs/phase2/icosahedron
+  Skipping ce_0 -- already saved
+Traceback (most recent call last):
+  File "/Users/aaronramos/Desktop/swirl-theory/studies/02b_icosahedron_phase2.py", line 226, in <module>
+    _d = json.load(_f)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 58 (char 57)
+Icosahedron: 12 vertices, 30 edges, min_edge=6.0000 (target 6.0)
+Vertex positions:
+  v00 = (0.0000, 3.0000, 4.8541)
+  v01 = (3.0000, 4.8541, 0.0000)
+  v02 = (4.8541, 0.0000, 3.0000)
+  v03 = (0.0000, 3.0000, -4.8541)
+  v04 = (3.0000, -4.8541, 0.0000)
+  v05 = (4.8541, 0.0000, -3.0000)
+  v06 = (0.0000, -3.0000, 4.8541)
+  v07 = (-3.0000, 4.8541, 0.0000)
+  v08 = (-4.8541, 0.0000, 3.0000)
+  v09 = (0.0000, -3.0000, -4.8541)
+  v10 = (-3.0000, -4.8541, 0.0000)
+  v11 = (-4.8541, 0.0000, -3.0000)
+
+Searching 4096 configs for targets [0, 8, 13, 14, 15, 16, 18, 20] ...
+Found configs for cross-edge counts: [0, 8, 13, 14, 15, 16, 18, 20]
+
+02b_icosahedron_phase2.py  --  8 configurations
+Output dir: /Users/aaronramos/Desktop/swirl-theory/outputs/phase2/icosahedron
+
+============================================================
+  Config: ce_0
+  Cross-edges: 0 / 30  (0.000)
+  Pi-phases:   0 / 12
+============================================================
+  E(0) = 3.256604e+02  max|phi|(0) = 0.680887
+  step= 1000  t=   50.0  E=3.25675e+02  E_bind=1.6411e+02  max|phi|=0.17865  drift=4.39e-05
+  step= 2000  t=  100.0  E=3.25673e+02  E_bind=1.6411e+02  max|phi|=0.13692  drift=3.92e-05
+  step= 3000  t=  150.0  E=3.25674e+02  E_bind=1.6411e+02  max|phi|=0.13637  drift=4.31e-05
+  step= 4000  t=  200.0  E=3.25674e+02  E_bind=1.6411e+02  max|phi|=0.23714  drift=4.15e-05
+  step= 5000  t=  250.0  E=3.25673e+02  E_bind=1.6411e+02  max|phi|=0.25840  drift=3.97e-05
+  step= 6000  t=  300.0  E=3.25672e+02  E_bind=1.6411e+02  max|phi|=0.11791  drift=3.64e-05
+  step= 7000  t=  350.0  E=3.25673e+02  E_bind=1.6411e+02  max|phi|=0.26251  drift=3.89e-05
+  step= 8000  t=  400.0  E=3.25672e+02  E_bind=1.6411e+02  max|phi|=0.74064  drift=3.50e-05
+  step= 9000  t=  450.0  E=3.25672e+02  E_bind=1.6411e+02  max|phi|=0.21078  drift=3.52e-05
+  step=10000  t=  500.0  E=3.25672e+02  E_bind=1.6411e+02  max|phi|=0.37155  drift=3.43e-05
+
+  -- ce_0 complete (443.1 s) --
+  E_bind(T) = 1.6411e+02  |  verdict: UNSTABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/icosahedron/ce_0.json
+
+============================================================
+  Config: ce_8
+  Cross-edges: 8 / 30  (0.267)
+  Pi-phases:   2 / 12
+============================================================
+  E(0) = 2.367492e+02  max|phi|(0) = 0.678512
+  step= 1000  t=   50.0  E=2.36768e+02  E_bind=7.5204e+01  max|phi|=0.15834  drift=8.10e-05
+  step= 2000  t=  100.0  E=2.36768e+02  E_bind=7.5203e+01  max|phi|=0.12565  drift=7.84e-05
+  step= 3000  t=  150.0  E=2.36768e+02  E_bind=7.5204e+01  max|phi|=0.13141  drift=8.03e-05
+  step= 4000  t=  200.0  E=2.36769e+02  E_bind=7.5203e+01  max|phi|=0.18560  drift=8.34e-05
+  step= 5000  t=  250.0  E=2.36768e+02  E_bind=7.5203e+01  max|phi|=0.17025  drift=7.94e-05
+  step= 6000  t=  300.0  E=2.36768e+02  E_bind=7.5203e+01  max|phi|=0.12519  drift=7.74e-05
+  step= 7000  t=  350.0  E=2.36768e+02  E_bind=7.5203e+01  max|phi|=0.20424  drift=7.82e-05
+  step= 8000  t=  400.0  E=2.36767e+02  E_bind=7.5202e+01  max|phi|=0.50969  drift=7.68e-05
+  step= 9000  t=  450.0  E=2.36765e+02  E_bind=7.5202e+01  max|phi|=0.40152  drift=6.74e-05
+  step=10000  t=  500.0  E=2.36768e+02  E_bind=7.5202e+01  max|phi|=0.24173  drift=7.75e-05
+
+  -- ce_8 complete (433.1 s) --
+  E_bind(T) = 7.5202e+01  |  verdict: UNSTABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/icosahedron/ce_8.json
+
+============================================================
+  Config: ce_13
+  Cross-edges: 13 / 30  (0.433)
+  Pi-phases:   3 / 12
+============================================================
+  E(0) = 1.844556e+02  max|phi|(0) = 0.674301
+  step= 1000  t=   50.0  E=1.84478e+02  E_bind=2.2913e+01  max|phi|=0.11853  drift=1.19e-04
+  step= 2000  t=  100.0  E=1.84478e+02  E_bind=2.2913e+01  max|phi|=0.13374  drift=1.21e-04
+  step= 3000  t=  150.0  E=1.84478e+02  E_bind=2.2913e+01  max|phi|=0.12944  drift=1.20e-04
+  step= 4000  t=  200.0  E=1.84479e+02  E_bind=2.2913e+01  max|phi|=0.17050  drift=1.27e-04
+  step= 5000  t=  250.0  E=1.84478e+02  E_bind=2.2913e+01  max|phi|=0.15216  drift=1.20e-04
+  step= 6000  t=  300.0  E=1.84477e+02  E_bind=2.2913e+01  max|phi|=0.12646  drift=1.17e-04
+  step= 7000  t=  350.0  E=1.84478e+02  E_bind=2.2912e+01  max|phi|=0.17690  drift=1.20e-04
+  step= 8000  t=  400.0  E=1.84478e+02  E_bind=2.2913e+01  max|phi|=0.41717  drift=1.22e-04
+  step= 9000  t=  450.0  E=1.84475e+02  E_bind=2.2912e+01  max|phi|=0.40983  drift=1.05e-04
+  step=10000  t=  500.0  E=1.84478e+02  E_bind=2.2912e+01  max|phi|=0.23785  drift=1.20e-04
+
+  -- ce_13 complete (416.9 s) --
+  E_bind(T) = 2.2912e+01  |  verdict: UNSTABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/icosahedron/ce_13.json
+
+============================================================
+  Config: ce_14
+  Cross-edges: 14 / 30  (0.467)
+  Pi-phases:   4 / 12
+============================================================
+  E(0) = 1.721426e+02  max|phi|(0) = 0.672219
+  step= 1000  t=   50.0  E=1.72165e+02  E_bind=1.0601e+01  max|phi|=0.12552  drift=1.32e-04
+  step= 2000  t=  100.0  E=1.72166e+02  E_bind=1.0600e+01  max|phi|=0.11486  drift=1.33e-04
+  step= 3000  t=  150.0  E=1.72165e+02  E_bind=1.0601e+01  max|phi|=0.13014  drift=1.33e-04
+  step= 4000  t=  200.0  E=1.72167e+02  E_bind=1.0601e+01  max|phi|=0.15930  drift=1.40e-04
+  step= 5000  t=  250.0  E=1.72166e+02  E_bind=1.0601e+01  max|phi|=0.16750  drift=1.33e-04
+  step= 6000  t=  300.0  E=1.72165e+02  E_bind=1.0601e+01  max|phi|=0.13131  drift=1.31e-04
+  step= 7000  t=  350.0  E=1.72165e+02  E_bind=1.0600e+01  max|phi|=0.13833  drift=1.32e-04
+  step= 8000  t=  400.0  E=1.72166e+02  E_bind=1.0600e+01  max|phi|=0.35234  drift=1.34e-04
+  step= 9000  t=  450.0  E=1.72163e+02  E_bind=1.0600e+01  max|phi|=0.46548  drift=1.18e-04
+  step=10000  t=  500.0  E=1.72166e+02  E_bind=1.0600e+01  max|phi|=0.22303  drift=1.34e-04
+
+  -- ce_14 complete (417.3 s) --
+  E_bind(T) = 1.0600e+01  |  verdict: UNSTABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/icosahedron/ce_14.json
+
+============================================================
+  Config: ce_15
+  Cross-edges: 15 / 30  (0.500)
+  Pi-phases:   3 / 12
+============================================================
+  E(0) = 1.650991e+02  max|phi|(0) = 0.620233
+  step= 1000  t=   50.0  E=1.65122e+02  E_bind=3.5579e+00  max|phi|=0.10104  drift=1.41e-04
+  step= 2000  t=  100.0  E=1.65123e+02  E_bind=3.5580e+00  max|phi|=0.11910  drift=1.45e-04
+  step= 3000  t=  150.0  E=1.65122e+02  E_bind=3.5581e+00  max|phi|=0.12504  drift=1.42e-04
+  step= 4000  t=  200.0  E=1.65124e+02  E_bind=3.5577e+00  max|phi|=0.16718  drift=1.50e-04
+  step= 5000  t=  250.0  E=1.65122e+02  E_bind=3.5576e+00  max|phi|=0.15126  drift=1.42e-04
+  step= 6000  t=  300.0  E=1.65122e+02  E_bind=3.5571e+00  max|phi|=0.12068  drift=1.37e-04
+  step= 7000  t=  350.0  E=1.65122e+02  E_bind=3.5573e+00  max|phi|=0.17157  drift=1.42e-04
+  step= 8000  t=  400.0  E=1.65123e+02  E_bind=3.5580e+00  max|phi|=0.36469  drift=1.47e-04
+  step= 9000  t=  450.0  E=1.65120e+02  E_bind=3.5567e+00  max|phi|=0.37119  drift=1.27e-04
+  step=10000  t=  500.0  E=1.65123e+02  E_bind=3.5570e+00  max|phi|=0.24108  drift=1.44e-04
+
+  -- ce_15 complete (414.5 s) --
+  E_bind(T) = 3.5570e+00  |  verdict: UNSTABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/icosahedron/ce_15.json
+
+============================================================
+  Config: ce_16
+  Cross-edges: 16 / 30  (0.533)
+  Pi-phases:   4 / 12
+============================================================
+  E(0) = 1.527637e+02  max|phi|(0) = 0.620126
+  step= 1000  t=   50.0  E=1.52787e+02  E_bind=-8.7772e+00  max|phi|=0.11158  drift=1.54e-04
+  step= 2000  t=  100.0  E=1.52788e+02  E_bind=-8.7770e+00  max|phi|=0.12187  drift=1.59e-04
+  step= 3000  t=  150.0  E=1.52788e+02  E_bind=-8.7767e+00  max|phi|=0.12238  drift=1.57e-04
+  step= 4000  t=  200.0  E=1.52789e+02  E_bind=-8.7769e+00  max|phi|=0.14347  drift=1.67e-04
+  step= 5000  t=  250.0  E=1.52788e+02  E_bind=-8.7769e+00  max|phi|=0.14204  drift=1.59e-04
+  step= 6000  t=  300.0  E=1.52787e+02  E_bind=-8.7772e+00  max|phi|=0.12760  drift=1.55e-04
+  step= 7000  t=  350.0  E=1.52788e+02  E_bind=-8.7772e+00  max|phi|=0.15313  drift=1.58e-04
+  step= 8000  t=  400.0  E=1.52789e+02  E_bind=-8.7765e+00  max|phi|=0.32930  drift=1.64e-04
+  step= 9000  t=  450.0  E=1.52785e+02  E_bind=-8.7779e+00  max|phi|=0.42524  drift=1.41e-04
+  step=10000  t=  500.0  E=1.52788e+02  E_bind=-8.7777e+00  max|phi|=0.24955  drift=1.59e-04
+
+  -- ce_16 complete (412.2 s) --
+  E_bind(T) = -8.7777e+00  |  verdict: STABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/icosahedron/ce_16.json
+
+============================================================
+  Config: ce_18
+  Cross-edges: 18 / 30  (0.600)
+  Pi-phases:   6 / 12
+============================================================
+  E(0) = 1.297726e+02  max|phi|(0) = 0.579353
+  step= 1000  t=   50.0  E=1.29798e+02  E_bind=-3.1767e+01  max|phi|=0.11948  drift=1.93e-04
+  step= 2000  t=  100.0  E=1.29799e+02  E_bind=-3.1766e+01  max|phi|=0.12343  drift=2.04e-04
+  step= 3000  t=  150.0  E=1.29798e+02  E_bind=-3.1767e+01  max|phi|=0.11857  drift=1.95e-04
+  step= 4000  t=  200.0  E=1.29800e+02  E_bind=-3.1766e+01  max|phi|=0.12874  drift=2.09e-04
+  step= 5000  t=  250.0  E=1.29798e+02  E_bind=-3.1767e+01  max|phi|=0.11356  drift=1.98e-04
+  step= 6000  t=  300.0  E=1.29798e+02  E_bind=-3.1767e+01  max|phi|=0.11190  drift=1.95e-04
+  step= 7000  t=  350.0  E=1.29799e+02  E_bind=-3.1767e+01  max|phi|=0.11307  drift=2.01e-04
+  step= 8000  t=  400.0  E=1.29799e+02  E_bind=-3.1766e+01  max|phi|=0.20171  drift=2.02e-04
+  step= 9000  t=  450.0  E=1.29796e+02  E_bind=-3.1767e+01  max|phi|=0.45035  drift=1.80e-04
+  step=10000  t=  500.0  E=1.29799e+02  E_bind=-3.1767e+01  max|phi|=0.20191  drift=2.02e-04
+
+  -- ce_18 complete (418.6 s) --
+  E_bind(T) = -3.1767e+01  |  verdict: STABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/icosahedron/ce_18.json
+
+============================================================
+  Config: ce_20
+  Cross-edges: 20 / 30  (0.667)
+  Pi-phases:   6 / 12
+============================================================
+  E(0) = 1.114296e+02  max|phi|(0) = 0.473715
+  step= 1000  t=   50.0  E=1.11456e+02  E_bind=-5.0109e+01  max|phi|=0.09683  drift=2.35e-04
+  step= 2000  t=  100.0  E=1.11457e+02  E_bind=-5.0108e+01  max|phi|=0.11027  drift=2.48e-04
+  step= 3000  t=  150.0  E=1.11456e+02  E_bind=-5.0108e+01  max|phi|=0.09928  drift=2.38e-04
+  step= 4000  t=  200.0  E=1.11458e+02  E_bind=-5.0108e+01  max|phi|=0.08923  drift=2.55e-04
+  step= 5000  t=  250.0  E=1.11456e+02  E_bind=-5.0109e+01  max|phi|=0.10555  drift=2.40e-04
+  step= 6000  t=  300.0  E=1.11456e+02  E_bind=-5.0109e+01  max|phi|=0.11270  drift=2.34e-04
+  step= 7000  t=  350.0  E=1.11457e+02  E_bind=-5.0109e+01  max|phi|=0.10409  drift=2.42e-04
+  step= 8000  t=  400.0  E=1.11458e+02  E_bind=-5.0108e+01  max|phi|=0.11639  drift=2.53e-04
+  step= 9000  t=  450.0  E=1.11454e+02  E_bind=-5.0109e+01  max|phi|=0.21798  drift=2.22e-04
+  step=10000  t=  500.0  E=1.11457e+02  E_bind=-5.0108e+01  max|phi|=0.20630  drift=2.50e-04
+
+  -- ce_20 complete (426.1 s) --
+  E_bind(T) = -5.0108e+01  |  verdict: STABLE
+  Saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/icosahedron/ce_20.json
+
+Summary saved -> /Users/aaronramos/Desktop/swirl-theory/studies/../outputs/phase2/icosahedron/summary.json
+
+===============================================================================================
+  ICOSAHEDRON SUMMARY TABLE
+===============================================================================================
+  Config        X-edges     X-frac   n_pi      E_bind(T)      Amp Ret      Drift    Verdict
+  ------------------------------------------------------------------------------------------
+  ce_0                0      0.000      0     1.6411e+02       0.7431  3.433e-05   UNSTABLE
+  ce_8                8      0.267      2     7.5202e+01       0.4835  7.747e-05   UNSTABLE
+  ce_13              13      0.433      3     2.2912e+01       0.4757  1.199e-04   UNSTABLE
+  ce_14              14      0.467      4     1.0600e+01       0.4461  1.337e-04   UNSTABLE
+  ce_15              15      0.500      3     3.5570e+00       0.4822  1.438e-04   UNSTABLE
+  ce_16              16      0.533      4    -8.7777e+00       0.4991  1.592e-04     STABLE
+  ce_18              18      0.600      6    -3.1767e+01       0.4038  2.021e-04     STABLE
+  ce_20              20      0.667      6    -5.0108e+01       0.4126  2.502e-04     STABLE
+===============================================================================================
+  Phase 2 Icosahedron complete.

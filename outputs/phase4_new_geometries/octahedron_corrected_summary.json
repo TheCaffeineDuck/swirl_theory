@@ -1,0 +1,54 @@
+[
+  {
+    "geometry": "octahedron",
+    "config_name": "all_same",
+    "cross_edges": 0,
+    "cross_edge_fraction": 0.0,
+    "n_pi": 0,
+    "E_single": 13.462,
+    "final_E_bind": 64.58,
+    "amplitude_retention": 0.2730,
+    "energy_drift": 6.27e-05,
+    "verdict": "UNSTABLE",
+    "correction_note": "Corrected Apr 5, 2026. Original octahedron_summary.json used inflated E_single. See outputs/oct_audit/ for recomputation details."
+  },
+  {
+    "geometry": "octahedron",
+    "config_name": "single_flip",
+    "cross_edges": 4,
+    "cross_edge_fraction": 0.3333,
+    "n_pi": 1,
+    "E_single": 13.462,
+    "final_E_bind": 21.50,
+    "amplitude_retention": 0.4183,
+    "energy_drift": 9.77e-05,
+    "verdict": "UNSTABLE",
+    "correction_note": "Corrected Apr 5, 2026. Original octahedron_summary.json used inflated E_single. See outputs/oct_audit/ for recomputation details."
+  },
+  {
+    "geometry": "octahedron",
+    "config_name": "balanced",
+    "cross_edges": 6,
+    "cross_edge_fraction": 0.5,
+    "n_pi": 2,
+    "E_single": 13.462,
+    "final_E_bind": -2.90,
+    "amplitude_retention": 0.3798,
+    "energy_drift": 1.66e-04,
+    "verdict": "STABLE",
+    "correction_note": "Corrected Apr 5, 2026. Original octahedron_summary.json used inflated E_single. See outputs/oct_audit/ for recomputation details."
+  },
+  {
+    "geometry": "octahedron",
+    "config_name": "polarized",
+    "cross_edges": 8,
+    "cross_edge_fraction": 0.6667,
+    "n_pi": 2,
+    "E_single": 13.462,
+    "final_E_bind": -19.82,
+    "amplitude_retention": 0.3482,
+    "energy_drift": 1.98e-04,
+    "verdict": "STABLE",
+    "correction_note": "Corrected Apr 5, 2026. Original octahedron_summary.json used inflated E_single. See outputs/oct_audit/ for recomputation details."
+  }
+]

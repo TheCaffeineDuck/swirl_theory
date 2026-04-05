@@ -1,0 +1,278 @@
+{
+  "geometries": {
+    "cube": {
+      "n_vertices": 8,
+      "n_edges": 12,
+      "bipartite": true,
+      "configs": [
+        {
+          "config_name": "all_same_phase",
+          "cross_edges": 0,
+          "cross_edge_fraction": 0.0,
+          "final_E_bind": 73.84173111252294,
+          "amplitude_retention": 0.49709800473360255,
+          "energy_drift": 5.173062673509853e-05,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "single_flip",
+          "cross_edges": 3,
+          "cross_edge_fraction": 0.25,
+          "final_E_bind": 36.88656755737888,
+          "amplitude_retention": 0.42202377113619366,
+          "energy_drift": 8.82097352153954e-05,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "adjacent_flip",
+          "cross_edges": 4,
+          "cross_edge_fraction": 0.3333333333333333,
+          "final_E_bind": 20.586591211474442,
+          "amplitude_retention": 0.3693496754960174,
+          "energy_drift": 0.00011143369015662386,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "checkerboard",
+          "cross_edges": 6,
+          "cross_edge_fraction": 0.5,
+          "final_E_bind": -3.8634193342947754,
+          "amplitude_retention": 0.289439061620125,
+          "energy_drift": 0.00015896361684661044,
+          "verdict": "STABLE"
+        },
+        {
+          "config_name": "polarized_T1",
+          "cross_edges": 12,
+          "cross_edge_fraction": 1.0,
+          "final_E_bind": -23.9449738779296,
+          "amplitude_retention": 0.3290787424335274,
+          "energy_drift": 0.00021626555941710944,
+          "verdict": "STABLE"
+        }
+      ],
+      "per_edge": {
+        "E_bind_0_cross": 73.84173111252294,
+        "E_bind_max_cross": -23.9449738779296,
+        "max_cross_edges": 12,
+        "delta_E": -97.78670499045253,
+        "per_edge": -8.148892082537712
+      },
+      "threshold": {
+        "last_unstable_frac": 0.3333333333333333,
+        "last_unstable_name": "adjacent_flip",
+        "first_stable_frac": 0.5,
+        "first_stable_name": "checkerboard"
+      }
+    },
+    "icosahedron": {
+      "n_vertices": 12,
+      "n_edges": 30,
+      "bipartite": false,
+      "configs": [
+        {
+          "config_name": "ce_0",
+          "cross_edges": 0,
+          "cross_edge_fraction": 0.0,
+          "final_E_bind": 164.1058197879512,
+          "amplitude_retention": 0.7431018532123373,
+          "energy_drift": 3.4330155521451726e-05,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "ce_8",
+          "cross_edges": 8,
+          "cross_edge_fraction": 0.26666666666666666,
+          "final_E_bind": 75.20177446615543,
+          "amplitude_retention": 0.4834663327879864,
+          "energy_drift": 7.747170871290564e-05,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "ce_13",
+          "cross_edges": 13,
+          "cross_edge_fraction": 0.43333333333333335,
+          "final_E_bind": 22.911894211893667,
+          "amplitude_retention": 0.47569352728096403,
+          "energy_drift": 0.00011989847801103188,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "ce_14",
+          "cross_edges": 14,
+          "cross_edge_fraction": 0.4666666666666667,
+          "final_E_bind": 10.599817201233861,
+          "amplitude_retention": 0.44605780602227363,
+          "energy_drift": 0.0001336845104434845,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "ce_15",
+          "cross_edges": 15,
+          "cross_edge_fraction": 0.5,
+          "final_E_bind": 3.557019763068979,
+          "amplitude_retention": 0.48216631229468454,
+          "energy_drift": 0.00014380993931540652,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "ce_16",
+          "cross_edges": 16,
+          "cross_edge_fraction": 0.5333333333333333,
+          "final_E_bind": -8.777703224405684,
+          "amplitude_retention": 0.4991036704896814,
+          "energy_drift": 0.00015922281615434283,
+          "verdict": "STABLE"
+        },
+        {
+          "config_name": "ce_18",
+          "cross_edges": 18,
+          "cross_edge_fraction": 0.6,
+          "final_E_bind": -31.766974980660365,
+          "amplitude_retention": 0.40381798413996317,
+          "energy_drift": 0.00020210642480746017,
+          "verdict": "STABLE"
+        },
+        {
+          "config_name": "ce_20",
+          "cross_edges": 20,
+          "cross_edge_fraction": 0.6666666666666666,
+          "final_E_bind": -50.10834084634527,
+          "amplitude_retention": 0.4126078768827004,
+          "energy_drift": 0.00025022200131310314,
+          "verdict": "STABLE"
+        }
+      ],
+      "per_edge": {
+        "E_bind_0_cross": 164.1058197879512,
+        "E_bind_max_cross": -50.10834084634527,
+        "max_cross_edges": 20,
+        "delta_E": -214.21416063429646,
+        "per_edge": -10.710708031714823
+      },
+      "threshold": {
+        "last_unstable_frac": 0.5,
+        "last_unstable_name": "ce_15",
+        "first_stable_frac": 0.5333333333333333,
+        "first_stable_name": "ce_16"
+      }
+    },
+    "octahedron": {
+      "n_vertices": 6,
+      "n_edges": 12,
+      "bipartite": false,
+      "configs": [
+        {
+          "config_name": "all_same",
+          "cross_edges": 0,
+          "cross_edge_fraction": 0.0,
+          "final_E_bind": 154.50920989957754,
+          "amplitude_retention": 0.2730324095291319,
+          "energy_drift": 6.273353441065963e-05,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "single_flip",
+          "cross_edges": 4,
+          "cross_edge_fraction": 0.3333333333333333,
+          "final_E_bind": 51.64506834413362,
+          "amplitude_retention": 0.418306108899568,
+          "energy_drift": 9.76756155008972e-05,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "balanced",
+          "cross_edges": 6,
+          "cross_edge_fraction": 0.5,
+          "final_E_bind": -5.4484634598309185,
+          "amplitude_retention": 0.37975238707006964,
+          "energy_drift": 0.00016566263219756037,
+          "verdict": "STABLE"
+        },
+        {
+          "config_name": "polarized",
+          "cross_edges": 8,
+          "cross_edge_fraction": 0.6666666666666666,
+          "final_E_bind": -32.01208646342103,
+          "amplitude_retention": 0.34816483277970883,
+          "energy_drift": 0.00019775937481397078,
+          "verdict": "STABLE"
+        }
+      ],
+      "per_edge": {
+        "E_bind_0_cross": 154.50920989957754,
+        "E_bind_max_cross": -32.01208646342103,
+        "max_cross_edges": 8,
+        "delta_E": -186.52129636299856,
+        "per_edge": -23.31516204537482
+      },
+      "threshold": {
+        "last_unstable_frac": 0.3333333333333333,
+        "last_unstable_name": "single_flip",
+        "first_stable_frac": 0.5,
+        "first_stable_name": "balanced"
+      }
+    },
+    "tetrahedron": {
+      "n_vertices": 4,
+      "n_edges": 6,
+      "bipartite": false,
+      "configs": [
+        {
+          "config_name": "all_same",
+          "cross_edges": 0,
+          "cross_edge_fraction": 0.0,
+          "final_E_bind": 30.932166094088167,
+          "amplitude_retention": 0.1545342151847116,
+          "energy_drift": 6.851157851109524e-05,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "single_flip",
+          "cross_edges": 3,
+          "cross_edge_fraction": 0.5,
+          "final_E_bind": -0.04089707182469482,
+          "amplitude_retention": 0.3707962097089665,
+          "energy_drift": 0.00014973694087846577,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "config_name": "two_flip_adjacent",
+          "cross_edges": 4,
+          "cross_edge_fraction": 0.6666666666666666,
+          "final_E_bind": -10.38560447708852,
+          "amplitude_retention": 0.2556223900002501,
+          "energy_drift": 0.00020313570548831164,
+          "verdict": "STABLE"
+        },
+        {
+          "config_name": "two_flip_opposite",
+          "cross_edges": 4,
+          "cross_edge_fraction": 0.6666666666666666,
+          "final_E_bind": -10.385604477088528,
+          "amplitude_retention": 0.2556223900002498,
+          "energy_drift": 0.00020313570548831166,
+          "verdict": "STABLE"
+        }
+      ],
+      "per_edge": {
+        "E_bind_0_cross": 30.932166094088167,
+        "E_bind_max_cross": -10.385604477088528,
+        "max_cross_edges": 4,
+        "delta_E": -41.317770571176695,
+        "per_edge": -10.329442642794174
+      },
+      "threshold": {
+        "last_unstable_frac": 0.5,
+        "last_unstable_name": "single_flip",
+        "first_stable_frac": 0.6666666666666666,
+        "first_stable_name": "two_flip_adjacent"
+      }
+    }
+  },
+  "phase1_baseline": {
+    "amplitude_retention_final": 0.1999414317274472,
+    "energy_drift_final": 0.00015097324214067325,
+    "E_final": 13.46381472407115
+  }
+}

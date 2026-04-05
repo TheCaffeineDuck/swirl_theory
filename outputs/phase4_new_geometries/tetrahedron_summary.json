@@ -1,0 +1,46 @@
+[
+  {
+    "geometry": "tetrahedron",
+    "config_name": "all_same",
+    "cross_edges": 0,
+    "cross_edge_fraction": 0.0,
+    "n_pi": 0,
+    "final_E_bind": 30.932166094088167,
+    "amplitude_retention": 0.1545342151847116,
+    "energy_drift": 6.851157851109524e-05,
+    "verdict": "UNSTABLE"
+  },
+  {
+    "geometry": "tetrahedron",
+    "config_name": "single_flip",
+    "cross_edges": 3,
+    "cross_edge_fraction": 0.5,
+    "n_pi": 1,
+    "final_E_bind": -0.04089707182469482,
+    "amplitude_retention": 0.3707962097089665,
+    "energy_drift": 0.00014973694087846577,
+    "verdict": "UNSTABLE"
+  },
+  {
+    "geometry": "tetrahedron",
+    "config_name": "two_flip_adjacent",
+    "cross_edges": 4,
+    "cross_edge_fraction": 0.6666666666666666,
+    "n_pi": 2,
+    "final_E_bind": -10.38560447708852,
+    "amplitude_retention": 0.2556223900002501,
+    "energy_drift": 0.00020313570548831164,
+    "verdict": "STABLE"
+  },
+  {
+    "geometry": "tetrahedron",
+    "config_name": "two_flip_opposite",
+    "cross_edges": 4,
+    "cross_edge_fraction": 0.6666666666666666,
+    "n_pi": 2,
+    "final_E_bind": -10.385604477088528,
+    "amplitude_retention": 0.2556223900002498,
+    "energy_drift": 0.00020313570548831166,
+    "verdict": "STABLE"
+  }
+]

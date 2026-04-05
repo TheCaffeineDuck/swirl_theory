@@ -1,0 +1,13 @@
+{
+  "g4": 0.5,
+  "g6": 0.1,
+  "E0": 13.445777375115336,
+  "E_final": 13.447768533187123,
+  "energy_drift_pct": 0.014808798452012072,
+  "oscillates": true,
+  "sign_changes": 54,
+  "energy_ok": true,
+  "mean_amp_late": 0.02933523326110812,
+  "max_amplitude_final": 0.03729545124136183,
+  "passed": true
+}

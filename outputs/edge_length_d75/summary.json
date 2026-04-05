@@ -1,0 +1,87 @@
+{
+  "date": "2026-03-19",
+  "description": "Cube configs at d=7.5 (d/R_b=2.5), T=500, Set B parameters",
+  "parameters": {
+    "phi0": 0.5,
+    "R": 2.5,
+    "m": 1.0,
+    "g4": 0.3,
+    "g6": 0.055,
+    "N_grid": 64,
+    "L": 50.0,
+    "dt": 0.05,
+    "T_final": 500,
+    "sigma_KO": 0.01,
+    "d_edge": 7.5
+  },
+  "configs": [
+    {
+      "name": "all_same",
+      "cross_edges": 0,
+      "f_cross": 0.0,
+      "E_bind_d75": 25.612943526106548,
+      "verdict": "UNSTABLE"
+    },
+    {
+      "name": "single_flip",
+      "cross_edges": 3,
+      "f_cross": 0.25,
+      "E_bind_d75": 12.797136917494342,
+      "verdict": "UNSTABLE"
+    },
+    {
+      "name": "adjacent_2",
+      "cross_edges": 4,
+      "f_cross": 0.3333333333333333,
+      "E_bind_d75": 8.020664855407688,
+      "verdict": "UNSTABLE"
+    },
+    {
+      "name": "checkerboard",
+      "cross_edges": 6,
+      "f_cross": 0.5,
+      "E_bind_d75": -0.5183912107818998,
+      "verdict": "UNSTABLE"
+    },
+    {
+      "name": "polarized_T1",
+      "cross_edges": 12,
+      "f_cross": 1.0,
+      "E_bind_d75": -22.661023595182797,
+      "verdict": "STABLE"
+    }
+  ],
+  "comparison_d60": [
+    {
+      "name": "all_same",
+      "E_bind_d60": 73.8417,
+      "E_bind_d75": 25.612943526106548,
+      "sign_preserved": true
+    },
+    {
+      "name": "single_flip",
+      "E_bind_d60": 36.8866,
+      "E_bind_d75": 12.797136917494342,
+      "sign_preserved": true
+    },
+    {
+      "name": "adjacent_2",
+      "E_bind_d60": 20.5866,
+      "E_bind_d75": 8.020664855407688,
+      "sign_preserved": true
+    },
+    {
+      "name": "checkerboard",
+      "E_bind_d60": -3.8634,
+      "E_bind_d75": -0.5183912107818998,
+      "sign_preserved": true
+    },
+    {
+      "name": "polarized_T1",
+      "E_bind_d60": -51.5264,
+      "E_bind_d75": -22.661023595182797,
+      "sign_preserved": true
+    }
+  ],
+  "selection_rule_holds": true
+}

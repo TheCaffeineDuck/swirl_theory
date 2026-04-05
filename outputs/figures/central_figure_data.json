@@ -1,0 +1,170 @@
+[
+  {
+    "geometry": "Tetrahedron",
+    "label": "all_same",
+    "f_cross": 0.0,
+    "E_bind": 30.932166094088167,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Tetrahedron",
+    "label": "single_flip",
+    "f_cross": 0.5,
+    "E_bind": -0.04089707182469482,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Tetrahedron",
+    "label": "two_flip_adjacent",
+    "f_cross": 0.6666666666666666,
+    "E_bind": -10.38560447708852,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Tetrahedron",
+    "label": "two_flip_opposite",
+    "f_cross": 0.6666666666666666,
+    "E_bind": -10.385604477088528,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Octahedron",
+    "label": "all_same",
+    "f_cross": 0.0,
+    "E_bind": 154.50920989957754,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Octahedron",
+    "label": "single_flip",
+    "f_cross": 0.3333333333333333,
+    "E_bind": 51.64506834413362,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Octahedron",
+    "label": "balanced",
+    "f_cross": 0.5,
+    "E_bind": -5.4484634598309185,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Octahedron",
+    "label": "polarized",
+    "f_cross": 0.6666666666666666,
+    "E_bind": -32.01208646342103,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Cube",
+    "label": "all_same",
+    "f_cross": 0.0,
+    "E_bind": 73.84173111252294,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Cube",
+    "label": "single_flip",
+    "f_cross": 0.25,
+    "E_bind": 36.88656755737888,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Cube",
+    "label": "adj_flip",
+    "f_cross": 0.3333333333333333,
+    "E_bind": 20.586591211474442,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Cube",
+    "label": "checker",
+    "f_cross": 0.5,
+    "E_bind": -3.8634193342947754,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Cube",
+    "label": "4flip_CE8",
+    "f_cross": 0.6666666666666666,
+    "E_bind": -23.9449738779296,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Cube",
+    "label": "polar_T1",
+    "f_cross": 1.0,
+    "E_bind": -51.52640060352002,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Icosahedron",
+    "label": "ce_0",
+    "f_cross": 0.0,
+    "E_bind": 164.1058197879512,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Icosahedron",
+    "label": "ce_13",
+    "f_cross": 0.43333333333333335,
+    "E_bind": 22.911894211893667,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Icosahedron",
+    "label": "ce_14",
+    "f_cross": 0.4666666666666667,
+    "E_bind": 10.599817201233861,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Icosahedron",
+    "label": "ce_16",
+    "f_cross": 0.5333333333333333,
+    "E_bind": -8.777703224405684,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Icosahedron",
+    "label": "ce_18",
+    "f_cross": 0.6,
+    "E_bind": -31.766974980660365,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Icosahedron",
+    "label": "ce_20",
+    "f_cross": 0.6666666666666666,
+    "E_bind": -50.10834084634527,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Icosahedron",
+    "label": "ce_8",
+    "f_cross": 0.26666666666666666,
+    "E_bind": 75.20177446615543,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Icosahedron",
+    "label": "ce_15_A",
+    "f_cross": 0.5,
+    "E_bind": 3.55702,
+    "jitter": -0.005
+  },
+  {
+    "geometry": "Icosahedron",
+    "label": "ce_15_B",
+    "f_cross": 0.5,
+    "E_bind": -0.426228,
+    "jitter": 0.0
+  },
+  {
+    "geometry": "Icosahedron",
+    "label": "ce_15_C",
+    "f_cross": 0.5,
+    "E_bind": -1.486572,
+    "jitter": 0.005
+  }
+]

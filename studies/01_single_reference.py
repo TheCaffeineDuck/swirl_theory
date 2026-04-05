@@ -1,178 +1,145 @@
 """
 studies/01_single_reference.py
 ==============================
-Phase 1: Single Oscillon Baseline Decay Curves
+Phase 1: Single Oscillon Baseline -- Set B
 
-Evolves a single isolated Gaussian oscillon to T=500 for two parameter sets,
-producing the honest time-matched E_single(t) reference curves that all later
-phases depend on.
+Evolves a single isolated Gaussian oscillon to T=500 using Set B parameters,
+producing the time-matched E_single(t) reference for all subsequent phases.
 
-Parameter sets:
-  Set A: phi0=0.3, R=3.0
-  Set B: phi0=0.5, R=2.5
+Set B: phi0=0.5, R=2.5
+Fixed: m=1.0, g4=0.30, g6=0.055, N=64, L=50.0, dt=0.05, sigma=0.01
 
-Fixed: m=1.0, g4=0.30, g6=0.055, N=64, L=50.0, dt=0.05, sigma_KO=0.01
+Features incremental checkpointing every 1000 steps (~50 time units).
 """
 
 import sys
 import os
 import json
-import time
-from datetime import datetime
+from pathlib import Path
 
 import numpy as np
 
-# Allow running from project root or studies/ directory
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
 from engine.evolver import SexticEvolver
 
-# ── Fixed simulation parameters ──────────────────────────────────────────────
-FIXED = dict(m=1.0, g4=0.30, g6=0.055, N=64, L=50.0, dt=0.05, sigma_KO=0.01)
+# -- Parameters ---------------------------------------------------------------
+N    = 64
+L    = 50.0
+m    = 1.0
+g4   = 0.30
+g6   = 0.055
+dt   = 0.05
+sigma = 0.01
+phi0 = 0.5
+R    = 2.5
 
 T_END        = 500.0
-RECORD_EVERY = 10          # steps  (= 0.5 time units)
-PRINT_EVERY  = 100         # steps  (= 5   time units)
-N_STEPS      = int(T_END / FIXED["dt"])   # 10 000
+N_STEPS      = int(T_END / dt)   # 10000
+RECORD_EVERY = 10                 # every 10 steps = 0.5 time units
+PRINT_EVERY  = 1000               # every 1000 steps = 50 time units
+CHECKPOINT_EVERY = 1000
 
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "outputs", "phase1")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-# ── Parameter sets ────────────────────────────────────────────────────────────
-PARAM_SETS = [
-    {"label": "A", "phi0": 0.3, "R": 3.0},
-    {"label": "B", "phi0": 0.5, "R": 2.5},
-]
+OUT_PATH = Path(os.path.join(OUTPUT_DIR, "set_B_baseline.json"))
+CHECKPOINT_PATH = OUT_PATH.with_suffix('.checkpoint.json')
 
 
-# ── Helper: build Gaussian oscillon initial condition ─────────────────────────
-def gaussian_oscillon(evolver, phi0, R):
-    """Return (phi, phi_dot) for a single Gaussian oscillon at grid centre."""
-    r2 = evolver.X**2 + evolver.Y**2 + evolver.Z**2
-    phi = phi0 * np.exp(-r2 / (2.0 * R**2))
-    phi_dot = np.zeros_like(phi)
-    return phi, phi_dot
+# -- Checkpoint helpers -------------------------------------------------------
+def checkpoint_callback(state):
+    """Atomic incremental save."""
+    tmp_path = str(CHECKPOINT_PATH) + '.tmp'
+    with open(tmp_path, 'w') as f:
+        json.dump(state, f)
+    os.replace(tmp_path, str(CHECKPOINT_PATH))
 
 
-# ── Main evolution routine ────────────────────────────────────────────────────
-def run_set(label, phi0, R):
-    params = {**FIXED, "phi0": phi0, "R": R, "label": label}
+# -- Main ---------------------------------------------------------------------
+if __name__ == "__main__":
+    # Skip if already completed
+    if OUT_PATH.exists():
+        with open(OUT_PATH) as f:
+            data = json.load(f)
+        if data.get('completed', False):
+            print("  CACHED: set_B_baseline")
+            print("  Output: %s" % str(OUT_PATH))
+            sys.exit(0)
 
-    print(f"\n{'='*60}")
-    print(f"  Set {label}: phi0={phi0}, R={R}")
-    print(f"  Steps: {N_STEPS}  |  dt={FIXED['dt']}  |  T_end={T_END}")
-    print(f"{'='*60}")
+    # Check for checkpoint to resume from
+    resume_state = None
+    if CHECKPOINT_PATH.exists():
+        with open(CHECKPOINT_PATH) as f:
+            resume_state = json.load(f)
+        print("  RESUMING from step %d" % resume_state['completed_steps'])
 
-    ev = SexticEvolver(
-        N=FIXED["N"],
-        L=FIXED["L"],
-        m=FIXED["m"],
-        g4=FIXED["g4"],
-        g6=FIXED["g6"],
-        dissipation_sigma=FIXED["sigma_KO"],
+    # Setup
+    ev = SexticEvolver(N=N, L=L, m=m, g4=g4, g6=g6, dissipation_sigma=sigma)
+
+    if resume_state is None:
+        r2 = ev.X**2 + ev.Y**2 + ev.Z**2
+        phi_init = phi0 * np.exp(-r2 / (2.0 * R**2))
+        phi_dot_init = np.zeros_like(phi_init)
+        ev.set_initial_conditions(phi_init, phi_dot_init)
+
+        print("Set B: phi0=%.2f  R=%.1f" % (phi0, R))
+        print("N=%d  L=%.1f  dt=%.3f  T_end=%.1f  steps=%d" % (N, L, dt, T_END, N_STEPS))
+        print("E(0) = %.6e" % ev.compute_energy())
+        print("max|phi|(0) = %.6f" % float(np.max(np.abs(phi_init))))
+        print("")
+
+    # Evolve with checkpointing
+    state = ev.evolve(
+        dt=dt, n_steps=N_STEPS, record_every=RECORD_EVERY,
+        checkpoint_every=CHECKPOINT_EVERY,
+        checkpoint_callback=checkpoint_callback,
+        resume_from=resume_state,
+        print_every=PRINT_EVERY,
+        tag="setB_baseline",
     )
 
-    phi_init, phidot_init = gaussian_oscillon(ev, phi0, R)
-    ev.set_initial_conditions(phi_init, phidot_init)
-
-    E0 = ev.compute_energy()
-    print(f"  Initial energy E(0) = {E0:.6f}")
-    print(f"  Initial max|phi|    = {np.max(np.abs(phi_init)):.6f}")
-
-    time_series = []
-
-    wall_start = time.perf_counter()
-
-    for step in range(N_STEPS + 1):
-        # Record before stepping (step 0) or every RECORD_EVERY steps after
-        if step % RECORD_EVERY == 0:
-            E_now = ev.compute_energy()
-            amp   = float(np.max(np.abs(ev.phi)))
-            time_series.append({"t": float(ev.t), "energy": E_now, "max_amplitude": amp})
-
-        # Progress print
-        if step % PRINT_EVERY == 0 and step > 0:
-            elapsed = time.perf_counter() - wall_start
-            pct     = 100.0 * step / N_STEPS
-            E_now   = time_series[-1]["energy"]
-            amp     = time_series[-1]["max_amplitude"]
-            drift   = abs(E_now - E0) / (abs(E0) + 1e-30)
-            eta_s   = elapsed / step * (N_STEPS - step)
-            print(
-                f"  t={ev.t:7.1f}  E={E_now:.5f}  "
-                f"max|phi|={amp:.5f}  drift={drift:.2e}  "
-                f"[{pct:.1f}%  ETA {eta_s/60:.1f} min]"
-            )
-            sys.stdout.flush()
-
-        if step < N_STEPS:
-            ev.step_rk4(FIXED["dt"])
-
-    wall_end = time.perf_counter()
-    runtime  = wall_end - wall_start
-
-    E_final   = time_series[-1]["energy"]
-    amp_final = time_series[-1]["max_amplitude"]
-    drift     = abs(E_final - E0) / (abs(E0) + 1e-30)
-
-    print(f"\n  -- Set {label} complete --")
-    print(f"  Runtime         : {runtime:.1f} s ({runtime/60:.2f} min)")
-    print(f"  E(0)            : {E0:.6f}")
-    print(f"  E(T)            : {E_final:.6f}")
-    print(f"  Energy drift    : {drift:.4e}")
-    print(f"  Final max|phi|  : {amp_final:.6f}")
-    print(f"  Amplitude retent: {amp_final/phi0:.4f}  (final/initial)")
-
-    # ── Save JSON ─────────────────────────────────────────────────────────────
-    ts_str   = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"set_{label}_baseline_{ts_str}.json"
-    out_path = os.path.join(OUTPUT_DIR, filename)
+    # Build final result in existing schema
+    ts = state['time_series']
+    E0 = state['E0']
+    E_final = ts['E_total'][-1]
+    amp_final = ts['max_amplitude'][-1]
+    drift_final = abs(E_final - E0) / (abs(E0) + 1e-30)
+    amp_retention = amp_final / phi0
 
     result = {
-        "params":          params,
-        "time_series":     time_series,
-        "energy_drift":    drift,
-        "runtime_seconds": runtime,
+        "param_set":               "B",
+        "phi0":                    phi0,
+        "R":                       R,
+        "t_series":                ts['times'],
+        "E_series":                ts['E_total'],
+        "max_phi_series":          ts['max_amplitude'],
+        "energy_drift_final":      drift_final,
+        "amplitude_retention_final": amp_retention,
+        "completed":               True,
     }
 
-    with open(out_path, "w") as f:
-        json.dump(result, f, indent=2)
+    # Atomic write
+    tmp = str(OUT_PATH) + '.tmp'
+    with open(tmp, "w") as f:
+        json.dump(result, f, separators=(",", ":"))
+    os.replace(tmp, str(OUT_PATH))
 
-    print(f"  Saved -> {out_path}")
-    return result
+    # Clean up checkpoint
+    if CHECKPOINT_PATH.exists():
+        CHECKPOINT_PATH.unlink()
 
-
-# ── Entry point ───────────────────────────────────────────────────────────────
-if __name__ == "__main__":
-    results = {}
-    for ps in PARAM_SETS:
-        results[ps["label"]] = run_set(ps["label"], ps["phi0"], ps["R"])
-
-    # ── Summary comparison ────────────────────────────────────────────────────
-    print(f"\n{'='*60}")
-    print("  SUMMARY COMPARISON")
-    print(f"{'='*60}")
-    header = (
-        f"  {'Set':<5} {'phi0':>6} {'R':>5} {'E(0)':>12} "
-        f"{'E(T)':>12} {'Drift':>10} {'max|phi|(T)':>13} {'Amp Retent':>12}"
-    )
-    print(header)
-    print("  " + "-" * (len(header) - 2))
-
-    for lbl, res in results.items():
-        p    = res["params"]
-        ts   = res["time_series"]
-        E0   = ts[0]["energy"]
-        ET   = ts[-1]["energy"]
-        amp0 = p["phi0"]
-        ampT = ts[-1]["max_amplitude"]
-        drift_val = res["energy_drift"]
-        retention = ampT / amp0
-        print(
-            f"  {lbl:<5} {p['phi0']:>6.3f} {p['R']:>5.1f} "
-            f"{E0:>12.5f} {ET:>12.5f} {drift_val:>10.3e} "
-            f"{ampT:>13.6f} {retention:>12.4f}"
-        )
-
-    print(f"\n  Output directory: {os.path.abspath(OUTPUT_DIR)}")
-    print("  Phase 1 complete.")
+    # Summary
+    print("")
+    print("=" * 55)
+    print("  FINAL SUMMARY -- Set B")
+    print("=" * 55)
+    print("  Runtime              : %.1f s (%.2f min)" % (
+        state['wall_elapsed'], state['wall_elapsed'] / 60))
+    print("  E(0)                 : %.6e" % E0)
+    print("  E(T=500)             : %.6e" % E_final)
+    print("  Energy drift         : %.4e" % drift_final)
+    print("  Final max|phi|       : %.6f" % amp_final)
+    print("  Amplitude retention  : %.4f  (final/initial)" % amp_retention)
+    print("  Records saved        : %d" % len(ts['times']))
+    print("  Output               : %s" % str(OUT_PATH))
+    print("=" * 55)
+    print("  Phase 1 Set B complete.")

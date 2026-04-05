@@ -1,0 +1,80 @@
+{
+  "description": "Phase 9: Second Potential Universality Test",
+  "parameters_used": {
+    "g4": 0.5,
+    "g6": 0.1,
+    "m": 1.0,
+    "phi0": 0.5,
+    "R": 2.5,
+    "N": 64,
+    "L": 50.0,
+    "dt": 0.05,
+    "T_final": 500.0,
+    "sigma": 0.01,
+    "d": 6.0
+  },
+  "baseline": {
+    "E_single_T0": 13.445777375115336,
+    "E_single_T500": 13.447812857987417,
+    "energy_drift_pct": 0.015138454365966014,
+    "amplitude_retention": 0.20029815886902966
+  },
+  "pairwise": {
+    "E_bind_same": 5.152161220982162,
+    "E_bind_cross": -5.179133795217162,
+    "ratio_abs": 1.0052351960814336,
+    "predicted_threshold_f_star": 0.49869461794515074
+  },
+  "cube": {
+    "cube_all_same": {
+      "CE": 0,
+      "f_cross": 0.0,
+      "E_bind": 73.41580481409777
+    },
+    "cube_checkerboard": {
+      "CE": 6,
+      "f_cross": 0.5,
+      "E_bind": -3.9022748393857825
+    },
+    "cube_polarized_T1": {
+      "CE": 12,
+      "f_cross": 1.0,
+      "E_bind": -51.44394232318004
+    }
+  },
+  "icosahedron": {
+    "ico_ce15_A": {
+      "CE": 15,
+      "f_cross": 0.5,
+      "E_bind": 3.373772898856913
+    },
+    "ico_ce20": {
+      "CE": 20,
+      "f_cross": 0.667,
+      "E_bind": -50.043194797067386
+    }
+  },
+  "sign_matches": {
+    "cube_all_same": "YES",
+    "cube_checkerboard": "YES",
+    "cube_polarized_T1": "YES",
+    "ico_ce15_A": "YES",
+    "ico_ce20": "YES"
+  },
+  "cube_sign_flips": {
+    "f0_to_f50": true,
+    "f0_to_f100": true
+  },
+  "verdict": "UNIVERSAL",
+  "setB_reference": {
+    "E_single_T0": 13.4618,
+    "E_single_T500": 13.4638,
+    "E_bind_same": 5.172,
+    "E_bind_cross": -5.188,
+    "cube_all_same": 73.842,
+    "cube_checkerboard": -3.863,
+    "cube_polarized_T1": -51.526,
+    "ico_ce15_A": 3.557,
+    "ico_ce20": -50.108
+  }
+}
